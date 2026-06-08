@@ -125,6 +125,7 @@ def _load_demo(
     gripper = np.asarray(obs[gripper_key], dtype=np.float32)
     if gripper.ndim == 1:
         gripper = gripper[:, None]
+    gripper = gripper[:, :1]
     horizon = min(len(joint), len(gripper))
 
     videos = {}
