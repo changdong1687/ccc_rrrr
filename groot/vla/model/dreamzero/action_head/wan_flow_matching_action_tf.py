@@ -618,6 +618,8 @@ class WANPolicyHead(ActionHead):
         if actions.numel() > 0:
             assert actions.min() >= -1.0 and actions.max() <= 1.0, "actions must be in [-1,1] range"
         videos = data["images"]
+        video_lengths = data.get("image__lengths", None)
+        action_lengths = data.get("action__lengths", None)
 
         videos = rearrange(videos, "b t h w c -> b c t h w")
         # print("videos", videos.shape)
@@ -785,7 +787,14 @@ class WANPolicyHead(ActionHead):
             ).mean(dim=(1,3,4))  # shape: [B, ...]
 
             weight_dynamics = dynamics_loss_per_sample * self.scheduler.training_weight(timestep.flatten(0, 1)).unflatten(0, (noise.shape[0], noise.shape[1])).to(self._device)
-            weighted_dynamics_loss = weight_dynamics.mean()
+            if video_lengths is not None:
+                latent_lengths = (1 + (video_lengths - 1) // 4).to(self.device)
+                max_T = weight_dynamics.shape[1]
+                frame_mask = torch.arange(max_T, device=self._device)[None, :] < latent_lengths[:, None]
+                weight_dynamics = weight_dynamics * frame_mask.float()
+                weighted_dynamics_loss = weight_dynamics.sum() / frame_mask.float().sum().clamp(min=1)
+            else:
+                weighted_dynamics_loss = weight_dynamics.mean()
             
             if actions.numel() > 0:
                 action_loss_per_sample = torch.nn.functional.mse_loss(
@@ -795,7 +804,14 @@ class WANPolicyHead(ActionHead):
                 weight_action = action_loss_per_sample.mean(dim=2) * self.scheduler.training_weight(
                     timestep_action.flatten(0, 1),
                 ).unflatten(0, (noise_action.shape[0], noise_action.shape[1])).to(self._device)
-                weighted_action_loss = weight_action.mean()
+                if action_lengths is not None:
+                    action_lengths = action_lengths.to(self._device)
+                    max_A = weight_action.shape[1]
+                    act_mask = torch.arange(max_A, device=self._device)[None, :] < action_lengths[:, None]
+                    weight_action = weight_action * act_mask.float()
+                    weighted_action_loss = weight_action.sum() / act_mask.float().sum().clamp(min=1)
+                else:
+                    weighted_action_loss = weight_action.mean()
                 loss = weighted_dynamics_loss + weighted_action_loss
             else:
                 weighted_action_loss = torch.tensor(0.0, device=self._device)
