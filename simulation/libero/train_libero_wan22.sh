@@ -18,6 +18,7 @@ IMAGE_ENCODER_DIR=${IMAGE_ENCODER_DIR:-"$DREAMZERO_ROOT/checkpoints/Wan2.1-I2V-1
 TOKENIZER_DIR=${TOKENIZER_DIR:-"$DREAMZERO_ROOT/checkpoints/umt5-xxl"}
 MAX_STEPS=${MAX_STEPS:-100000}
 PER_DEVICE_BS=${PER_DEVICE_BS:-1}
+GRADIENT_ACCUM=${GRADIENT_ACCUM:-4}
 
 if [ ! -d "$WAN22_CKPT_DIR" ] || [ -z "$(ls -A "$WAN22_CKPT_DIR" 2>/dev/null)" ]; then
     echo "Wan2.2-TI2V-5B not found at $WAN22_CKPT_DIR. Downloading from HuggingFace..."
@@ -55,10 +56,11 @@ python3 -m torch.distributed.run --nproc_per_node "$NUM_GPUS" --standalone groot
     seed=42 \
     training_args.learning_rate=1e-5 \
     training_args.deepspeed="groot/vla/configs/deepspeed/zero2.json" \
-    save_steps=1000 \
+    save_steps=500 \
     training_args.warmup_ratio=0.05 \
     output_dir="$OUTPUT_DIR" \
     per_device_train_batch_size="$PER_DEVICE_BS" \
+    gradient_accumulation_steps="$GRADIENT_ACCUM" \
     max_steps="$MAX_STEPS" \
     weight_decay=1e-5 \
     save_total_limit=10 \

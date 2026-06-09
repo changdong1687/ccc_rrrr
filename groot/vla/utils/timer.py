@@ -21,7 +21,7 @@ class ContextTimer:
     def __exit__(self, exc_type, exc_value, traceback):
         key = self.key_stack.pop()  # Pop key from stack
         diff = time.time() - self.start_times[key]
-        self.trainer.log({f"{key}_time": diff})
+        # self.trainer.log({f"{key}_time": diff})
         # print(f"{key}: {diff:.2f} seconds")
 
 
