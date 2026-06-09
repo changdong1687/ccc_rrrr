@@ -1,0 +1,138 @@
+Error executing job with overrides: ['report_to=wandb', 'data=dreamzero/libero_relative', 'wandb_project=dreamzero-libero', 'train_architecture=lora', 'num_frames=33', 'action_horizon=24', 'num_views=2', 'model=dreamzero/vla', 'model/dreamzero/action_head=wan_flow_matching_action_tf_wan22', 'model/dreamzero/transform=dreamzero_cotrain', 'num_frame_per_block=2', 'num_action_per_block=24', 'num_state_per_block=1', 'seed=42', 'training_args.learning_rate=1e-5', 'training_args.deepspeed=groot/vla/configs/deepspeed/zero2.json', 'save_steps=1000', 'training_args.warmup_ratio=0.05', 'output_dir=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/dreamzero_libero_wan22_lora_smoke_gbs4', 'per_device_train_batch_size=4', 'max_steps=10', 'weight_decay=1e-5', 'save_total_limit=10', 'upload_checkpoints=false', 'bf16=true', 'tf32=true', 'eval_bf16=true', 'dataloader_pin_memory=false', 'dataloader_num_workers=2', 'image_resolution_width=320', 'image_resolution_height=160', 'save_lora_only=true', 'max_chunk_size=4', 'save_strategy=steps', 'libero_data_root=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/data/libero_spatial', 'dit_version=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B', 'text_encoder_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/models_t5_umt5-xxl-enc-bf16.pth', 'image_encoder_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.1-I2V-14B-480P/models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth', 'vae_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/Wan2.2_VAE.pth', 'tokenizer_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/umt5-xxl']
+Traceback (most recent call last):
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 135, in <module>
+    main()
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+    raise ex
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+           ^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+            ^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 132, in run
+    _ = ret.return_value
+        ^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/core/utils.py", line 260, in return_value
+    raise self._return_value
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 131, in main
+    experiment.train()
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/base.py", line 870, in train
+    self.trainer.train(resume_from_checkpoint=self.resume_from_checkpoint)
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/base.py", line 536, in train
+    return super().train(resume_from_checkpoint, trial, ignore_keys_for_eval, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 2514, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 5243, in get_batch_samples
+    batch_samples.append(next(epoch_iterator))
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1516, in _next_data
+    return self._process_data(data, worker_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1551, in _process_data
+    data.reraise()
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/_utils.py", line 769, in reraise
+    raise exception
+ValueError: Caught ValueError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 43, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 180, in __call__
+    return collate(features, self.tokenizer, self.num_views, self.embodiment_tag_mapping)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in collate
+    batch[key] = torch.from_numpy(np.stack(values))
+                                  ^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/numpy/core/shape_base.py", line 449, in stack
+    raise ValueError('all input arrays must have the same shape')
+ValueError: all input arrays must have the same shape
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 135, in <module>
+[rank0]:     main()
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+[rank0]:     _run_hydra(
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+[rank0]:     _run_app(
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+[rank0]:     run_and_report(
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 223, in run_and_report
+[rank0]:     raise ex
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+[rank0]:     return func()
+[rank0]:            ^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+[rank0]:     lambda: hydra.run(
+[rank0]:             ^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 132, in run
+[rank0]:     _ = ret.return_value
+[rank0]:         ^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/core/utils.py", line 260, in return_value
+[rank0]:     raise self._return_value
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+[rank0]:     ret.return_value = task_function(task_cfg)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 131, in main
+[rank0]:     experiment.train()
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/base.py", line 870, in train
+[rank0]:     self.trainer.train(resume_from_checkpoint=self.resume_from_checkpoint)
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/base.py", line 536, in train
+[rank0]:     return super().train(resume_from_checkpoint, trial, ignore_keys_for_eval, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 2514, in _inner_training_loop
+[rank0]:     batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
+[rank0]:                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/transformers/trainer.py", line 5243, in get_batch_samples
+[rank0]:     batch_samples.append(next(epoch_iterator))
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1516, in _next_data
+[rank0]:     return self._process_data(data, worker_id)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1551, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/_utils.py", line 769, in reraise
+[rank0]:     raise exception
+[rank0]: ValueError: Caught ValueError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 43, in fetch
+[rank0]:     return self.collate_fn(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 180, in __call__
+[rank0]:     return collate(features, self.tokenizer, self.num_views, self.embodiment_tag_mapping)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in collate
+[rank0]:     batch[key] = torch.from_numpy(np.stack(values))
+[rank0]:                                   ^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours/lib/python3.11/site-packages/numpy/core/shape_base.py", line 449, in stack
+[rank0]:     raise ValueError('all input arrays must have the same shape')
+[rank0]: ValueError: all input arrays must have the same shape
