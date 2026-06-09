@@ -21,8 +21,8 @@ CAMERA_KEYS = {
     "agentview": ("agentview_rgb", "agentview_image", "agentview"),
     "eye_in_hand": ("eye_in_hand_rgb", "robot0_eye_in_hand_image", "eye_in_hand"),
 }
-JOINT_KEYS = ("robot0_joint_pos", "joint_pos", "joint_position")
-GRIPPER_KEYS = ("robot0_gripper_qpos", "robot0_gripper_pos", "gripper_qpos", "gripper_position")
+JOINT_KEYS = ("robot0_joint_pos", "joint_pos", "joint_position", "joint_states")
+GRIPPER_KEYS = ("robot0_gripper_qpos", "robot0_gripper_pos", "gripper_qpos", "gripper_position", "gripper_states")
 
 
 def _read_attr_text(obj: h5py.Group, key: str) -> str | None:
