@@ -164,9 +164,6 @@ def collate(features: List[dict], tokenizer: AutoTokenizer, num_views=3, embodim
             batch['text_attention_mask_negative'] = mask
         else:
             values = [elem[key] for elem in features]
-            if not all(hasattr(v, "shape") for v in values):
-                value_types = [type(v).__name__ for v in values]
-                raise TypeError(f"Cannot collate key '{key}' with value types {value_types}.")
             shapes = [v.shape for v in values]
             if len(set(shapes)) == 1:
                 batch[key] = torch.from_numpy(np.stack(values))
