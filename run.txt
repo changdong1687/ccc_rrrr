@@ -1,1183 +1,5 @@
-/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 2.0.8 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
-  check_for_updates()
-Run name: dreamzero_libero_wan22_lora_test
-Loading sharded safetensors using index: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/diffusion_pytorch_model.safetensors.index.json
-Loading shard: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/diffusion_pytorch_model-00001-of-00003.safetensors
-Loading shard: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/diffusion_pytorch_model-00003-of-00003.safetensors
-Loading shard: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/diffusion_pytorch_model-00002-of-00003.safetensors
-Missing keys when loading pretrained weights: ['state_encoder.layer1.W', 'state_encoder.layer1.b', 'state_encoder.layer2.W', 'state_encoder.layer2.b', 'action_encoder.W1.W', 'action_encoder.W1.b', 'action_encoder.W2.W', 'action_encoder.W2.b', 'action_encoder.W3.W', 'action_encoder.W3.b', 'action_decoder.layer1.W', 'action_decoder.layer1.b', 'action_decoder.layer2.W', 'action_decoder.layer2.b', 'blocks.0.cross_attn.k_img.weight', 'blocks.0.cross_attn.k_img.bias', 'blocks.0.cross_attn.v_img.weight', 'blocks.0.cross_attn.v_img.bias', 'blocks.0.cross_attn.norm_k_img.weight', 'blocks.1.cross_attn.k_img.weight', 'blocks.1.cross_attn.k_img.bias', 'blocks.1.cross_attn.v_img.weight', 'blocks.1.cross_attn.v_img.bias', 'blocks.1.cross_attn.norm_k_img.weight', 'blocks.2.cross_attn.k_img.weight', 'blocks.2.cross_attn.k_img.bias', 'blocks.2.cross_attn.v_img.weight', 'blocks.2.cross_attn.v_img.bias', 'blocks.2.cross_attn.norm_k_img.weight', 'blocks.3.cross_attn.k_img.weight', 'blocks.3.cross_attn.k_img.bias', 'blocks.3.cross_attn.v_img.weight', 'blocks.3.cross_attn.v_img.bias', 'blocks.3.cross_attn.norm_k_img.weight', 'blocks.4.cross_attn.k_img.weight', 'blocks.4.cross_attn.k_img.bias', 'blocks.4.cross_attn.v_img.weight', 'blocks.4.cross_attn.v_img.bias', 'blocks.4.cross_attn.norm_k_img.weight', 'blocks.5.cross_attn.k_img.weight', 'blocks.5.cross_attn.k_img.bias', 'blocks.5.cross_attn.v_img.weight', 'blocks.5.cross_attn.v_img.bias', 'blocks.5.cross_attn.norm_k_img.weight', 'blocks.6.cross_attn.k_img.weight', 'blocks.6.cross_attn.k_img.bias', 'blocks.6.cross_attn.v_img.weight', 'blocks.6.cross_attn.v_img.bias', 'blocks.6.cross_attn.norm_k_img.weight', 'blocks.7.cross_attn.k_img.weight', 'blocks.7.cross_attn.k_img.bias', 'blocks.7.cross_attn.v_img.weight', 'blocks.7.cross_attn.v_img.bias', 'blocks.7.cross_attn.norm_k_img.weight', 'blocks.8.cross_attn.k_img.weight', 'blocks.8.cross_attn.k_img.bias', 'blocks.8.cross_attn.v_img.weight', 'blocks.8.cross_attn.v_img.bias', 'blocks.8.cross_attn.norm_k_img.weight', 'blocks.9.cross_attn.k_img.weight', 'blocks.9.cross_attn.k_img.bias', 'blocks.9.cross_attn.v_img.weight', 'blocks.9.cross_attn.v_img.bias', 'blocks.9.cross_attn.norm_k_img.weight', 'blocks.10.cross_attn.k_img.weight', 'blocks.10.cross_attn.k_img.bias', 'blocks.10.cross_attn.v_img.weight', 'blocks.10.cross_attn.v_img.bias', 'blocks.10.cross_attn.norm_k_img.weight', 'blocks.11.cross_attn.k_img.weight', 'blocks.11.cross_attn.k_img.bias', 'blocks.11.cross_attn.v_img.weight', 'blocks.11.cross_attn.v_img.bias', 'blocks.11.cross_attn.norm_k_img.weight', 'blocks.12.cross_attn.k_img.weight', 'blocks.12.cross_attn.k_img.bias', 'blocks.12.cross_attn.v_img.weight', 'blocks.12.cross_attn.v_img.bias', 'blocks.12.cross_attn.norm_k_img.weight', 'blocks.13.cross_attn.k_img.weight', 'blocks.13.cross_attn.k_img.bias', 'blocks.13.cross_attn.v_img.weight', 'blocks.13.cross_attn.v_img.bias', 'blocks.13.cross_attn.norm_k_img.weight', 'blocks.14.cross_attn.k_img.weight', 'blocks.14.cross_attn.k_img.bias', 'blocks.14.cross_attn.v_img.weight', 'blocks.14.cross_attn.v_img.bias', 'blocks.14.cross_attn.norm_k_img.weight', 'blocks.15.cross_attn.k_img.weight', 'blocks.15.cross_attn.k_img.bias', 'blocks.15.cross_attn.v_img.weight', 'blocks.15.cross_attn.v_img.bias', 'blocks.15.cross_attn.norm_k_img.weight', 'blocks.16.cross_attn.k_img.weight', 'blocks.16.cross_attn.k_img.bias', 'blocks.16.cross_attn.v_img.weight', 'blocks.16.cross_attn.v_img.bias', 'blocks.16.cross_attn.norm_k_img.weight', 'blocks.17.cross_attn.k_img.weight', 'blocks.17.cross_attn.k_img.bias', 'blocks.17.cross_attn.v_img.weight', 'blocks.17.cross_attn.v_img.bias', 'blocks.17.cross_attn.norm_k_img.weight', 'blocks.18.cross_attn.k_img.weight', 'blocks.18.cross_attn.k_img.bias', 'blocks.18.cross_attn.v_img.weight', 'blocks.18.cross_attn.v_img.bias', 'blocks.18.cross_attn.norm_k_img.weight', 'blocks.19.cross_attn.k_img.weight', 'blocks.19.cross_attn.k_img.bias', 'blocks.19.cross_attn.v_img.weight', 'blocks.19.cross_attn.v_img.bias', 'blocks.19.cross_attn.norm_k_img.weight', 'blocks.20.cross_attn.k_img.weight', 'blocks.20.cross_attn.k_img.bias', 'blocks.20.cross_attn.v_img.weight', 'blocks.20.cross_attn.v_img.bias', 'blocks.20.cross_attn.norm_k_img.weight', 'blocks.21.cross_attn.k_img.weight', 'blocks.21.cross_attn.k_img.bias', 'blocks.21.cross_attn.v_img.weight', 'blocks.21.cross_attn.v_img.bias', 'blocks.21.cross_attn.norm_k_img.weight', 'blocks.22.cross_attn.k_img.weight', 'blocks.22.cross_attn.k_img.bias', 'blocks.22.cross_attn.v_img.weight', 'blocks.22.cross_attn.v_img.bias', 'blocks.22.cross_attn.norm_k_img.weight', 'blocks.23.cross_attn.k_img.weight', 'blocks.23.cross_attn.k_img.bias', 'blocks.23.cross_attn.v_img.weight', 'blocks.23.cross_attn.v_img.bias', 'blocks.23.cross_attn.norm_k_img.weight', 'blocks.24.cross_attn.k_img.weight', 'blocks.24.cross_attn.k_img.bias', 'blocks.24.cross_attn.v_img.weight', 'blocks.24.cross_attn.v_img.bias', 'blocks.24.cross_attn.norm_k_img.weight', 'blocks.25.cross_attn.k_img.weight', 'blocks.25.cross_attn.k_img.bias', 'blocks.25.cross_attn.v_img.weight', 'blocks.25.cross_attn.v_img.bias', 'blocks.25.cross_attn.norm_k_img.weight', 'blocks.26.cross_attn.k_img.weight', 'blocks.26.cross_attn.k_img.bias', 'blocks.26.cross_attn.v_img.weight', 'blocks.26.cross_attn.v_img.bias', 'blocks.26.cross_attn.norm_k_img.weight', 'blocks.27.cross_attn.k_img.weight', 'blocks.27.cross_attn.k_img.bias', 'blocks.27.cross_attn.v_img.weight', 'blocks.27.cross_attn.v_img.bias', 'blocks.27.cross_attn.norm_k_img.weight', 'blocks.28.cross_attn.k_img.weight', 'blocks.28.cross_attn.k_img.bias', 'blocks.28.cross_attn.v_img.weight', 'blocks.28.cross_attn.v_img.bias', 'blocks.28.cross_attn.norm_k_img.weight', 'blocks.29.cross_attn.k_img.weight', 'blocks.29.cross_attn.k_img.bias', 'blocks.29.cross_attn.v_img.weight', 'blocks.29.cross_attn.v_img.bias', 'blocks.29.cross_attn.norm_k_img.weight', 'img_emb.proj.0.weight', 'img_emb.proj.0.bias', 'img_emb.proj.1.weight', 'img_emb.proj.1.bias', 'img_emb.proj.3.weight', 'img_emb.proj.3.bias', 'img_emb.proj.4.weight', 'img_emb.proj.4.bias']
-Successfully loaded pretrained weights
-defer_lora_injection@@ False
-Tune action head projector: True
-Tune action head diffusion model: True
-Adding LoRA to model
-Total parameters in diffusion model: 5,616,768,992
-Trainable parameters in diffusion model: 44,890,144
-VLA(
-  (backbone): IdentityBackbone()
-  (action_head): WANPolicyHead(
-    (text_encoder): WanTextEncoder(
-      (token_embedding): Embedding(256384, 4096)
-      (dropout): Dropout(p=0.1, inplace=False)
-      (blocks): ModuleList(
-        (0-23): 24 x T5SelfAttention(
-          (norm1): T5LayerNorm()
-          (attn): T5Attention(
-            (q): Linear(in_features=4096, out_features=4096, bias=False)
-            (k): Linear(in_features=4096, out_features=4096, bias=False)
-            (v): Linear(in_features=4096, out_features=4096, bias=False)
-            (o): Linear(in_features=4096, out_features=4096, bias=False)
-            (dropout): Dropout(p=0.1, inplace=False)
-          )
-          (norm2): T5LayerNorm()
-          (ffn): T5FeedForward(
-            (gate): Sequential(
-              (0): Linear(in_features=4096, out_features=10240, bias=False)
-              (1): GELU()
-            )
-            (fc1): Linear(in_features=4096, out_features=10240, bias=False)
-            (fc2): Linear(in_features=10240, out_features=4096, bias=False)
-            (dropout): Dropout(p=0.1, inplace=False)
-          )
-          (pos_embedding): T5RelativeEmbedding(
-            (embedding): Embedding(32, 64)
-          )
-        )
-      )
-      (norm): T5LayerNorm()
-    )
-    (image_encoder): WanImageEncoder(
-      (model): XLMRobertaCLIP(
-        (visual): VisionTransformer(
-          (patch_embedding): Conv2d(3, 1280, kernel_size=(14, 14), stride=(14, 14), bias=False)
-          (dropout): Dropout(p=0.0, inplace=False)
-          (pre_norm): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-          (transformer): Sequential(
-            (0): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (1): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (2): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (3): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (4): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (5): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (6): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (7): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (8): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (9): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (10): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (11): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (12): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (13): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (14): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (15): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (16): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (17): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (18): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (19): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (20): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (21): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (22): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (23): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (24): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (25): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (26): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (27): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (28): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (29): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (30): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-            (31): AttentionBlock(
-              (norm1): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (attn): SelfAttention(
-                (to_qkv): Linear(in_features=1280, out_features=3840, bias=True)
-                (proj): Linear(in_features=1280, out_features=1280, bias=True)
-              )
-              (norm2): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (mlp): Sequential(
-                (0): Linear(in_features=1280, out_features=5120, bias=True)
-                (1): GELU(approximate='none')
-                (2): Linear(in_features=5120, out_features=1280, bias=True)
-                (3): Dropout(p=0.0, inplace=False)
-              )
-            )
-          )
-          (post_norm): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-        )
-      )
-    )
-    (vae): WanVideoVAE38(
-      (model): VideoVAE38_(
-        (encoder): Encoder3d_38(
-          (conv1): CausalConv3d(12, 160, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-          (downsamples): Sequential(
-            (0): Down_ResidualBlock(
-              (avg_shortcut): AvgDown3D()
-              (downsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(160, 160, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(160, 160, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(160, 160, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(160, 160, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): Resample38(
-                  (resample): Sequential(
-                    (0): ZeroPad2d((0, 1, 0, 1))
-                    (1): Conv2d(160, 160, kernel_size=(3, 3), stride=(2, 2))
-                  )
-                )
-              )
-            )
-            (1): Down_ResidualBlock(
-              (avg_shortcut): AvgDown3D()
-              (downsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(160, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): CausalConv3d(160, 320, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): Resample38(
-                  (resample): Sequential(
-                    (0): ZeroPad2d((0, 1, 0, 1))
-                    (1): Conv2d(320, 320, kernel_size=(3, 3), stride=(2, 2))
-                  )
-                  (time_conv): CausalConv3d(320, 320, kernel_size=(3, 1, 1), stride=(2, 1, 1))
-                )
-              )
-            )
-            (2): Down_ResidualBlock(
-              (avg_shortcut): AvgDown3D()
-              (downsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(320, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): CausalConv3d(320, 640, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): Resample38(
-                  (resample): Sequential(
-                    (0): ZeroPad2d((0, 1, 0, 1))
-                    (1): Conv2d(640, 640, kernel_size=(3, 3), stride=(2, 2))
-                  )
-                  (time_conv): CausalConv3d(640, 640, kernel_size=(3, 1, 1), stride=(2, 1, 1))
-                )
-              )
-            )
-            (3): Down_ResidualBlock(
-              (avg_shortcut): AvgDown3D()
-              (downsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-              )
-            )
-          )
-          (middle): Sequential(
-            (0): ResidualBlock(
-              (residual): Sequential(
-                (0): RMS_norm()
-                (1): SiLU()
-                (2): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                (3): RMS_norm()
-                (4): SiLU()
-                (5): Dropout(p=0.0, inplace=False)
-                (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-              )
-              (shortcut): Identity()
-            )
-            (1): AttentionBlock(
-              (norm): RMS_norm()
-              (to_qkv): Conv2d(640, 1920, kernel_size=(1, 1), stride=(1, 1))
-              (proj): Conv2d(640, 640, kernel_size=(1, 1), stride=(1, 1))
-            )
-            (2): ResidualBlock(
-              (residual): Sequential(
-                (0): RMS_norm()
-                (1): SiLU()
-                (2): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                (3): RMS_norm()
-                (4): SiLU()
-                (5): Dropout(p=0.0, inplace=False)
-                (6): CausalConv3d(640, 640, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-              )
-              (shortcut): Identity()
-            )
-          )
-          (head): Sequential(
-            (0): RMS_norm()
-            (1): SiLU()
-            (2): CausalConv3d(640, 96, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-          )
-        )
-        (conv1): CausalConv3d(96, 96, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-        (conv2): CausalConv3d(48, 48, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-        (decoder): Decoder3d_38(
-          (conv1): CausalConv3d(48, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-          (middle): Sequential(
-            (0): ResidualBlock(
-              (residual): Sequential(
-                (0): RMS_norm()
-                (1): SiLU()
-                (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                (3): RMS_norm()
-                (4): SiLU()
-                (5): Dropout(p=0.0, inplace=False)
-                (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-              )
-              (shortcut): Identity()
-            )
-            (1): AttentionBlock(
-              (norm): RMS_norm()
-              (to_qkv): Conv2d(1024, 3072, kernel_size=(1, 1), stride=(1, 1))
-              (proj): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1))
-            )
-            (2): ResidualBlock(
-              (residual): Sequential(
-                (0): RMS_norm()
-                (1): SiLU()
-                (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                (3): RMS_norm()
-                (4): SiLU()
-                (5): Dropout(p=0.0, inplace=False)
-                (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-              )
-              (shortcut): Identity()
-            )
-          )
-          (upsamples): Sequential(
-            (0): Up_ResidualBlock(
-              (avg_shortcut): DupUp3D()
-              (upsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (3): Resample38(
-                  (resample): Sequential(
-                    (0): Upsample(scale_factor=(2.0, 2.0), mode='nearest-exact')
-                    (1): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-                  )
-                  (time_conv): CausalConv3d(1024, 2048, kernel_size=(3, 1, 1), stride=(1, 1, 1))
-                )
-              )
-            )
-            (1): Up_ResidualBlock(
-              (avg_shortcut): DupUp3D()
-              (upsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(1024, 1024, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (3): Resample38(
-                  (resample): Sequential(
-                    (0): Upsample(scale_factor=(2.0, 2.0), mode='nearest-exact')
-                    (1): Conv2d(1024, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-                  )
-                  (time_conv): CausalConv3d(1024, 2048, kernel_size=(3, 1, 1), stride=(1, 1, 1))
-                )
-              )
-            )
-            (2): Up_ResidualBlock(
-              (avg_shortcut): DupUp3D()
-              (upsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(1024, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): CausalConv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (3): Resample38(
-                  (resample): Sequential(
-                    (0): Upsample(scale_factor=(2.0, 2.0), mode='nearest-exact')
-                    (1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
-                  )
-                )
-              )
-            )
-            (3): Up_ResidualBlock(
-              (upsamples): Sequential(
-                (0): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(512, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): CausalConv3d(512, 256, kernel_size=(1, 1, 1), stride=(1, 1, 1))
-                )
-                (1): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-                (2): ResidualBlock(
-                  (residual): Sequential(
-                    (0): RMS_norm()
-                    (1): SiLU()
-                    (2): CausalConv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                    (3): RMS_norm()
-                    (4): SiLU()
-                    (5): Dropout(p=0.0, inplace=False)
-                    (6): CausalConv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-                  )
-                  (shortcut): Identity()
-                )
-              )
-            )
-          )
-          (head): Sequential(
-            (0): RMS_norm()
-            (1): SiLU()
-            (2): CausalConv3d(256, 12, kernel_size=(3, 3, 3), stride=(1, 1, 1))
-          )
-        )
-      )
-    )
-    (normalize_video): Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], inplace=False)
-    (model): PeftModel(
-      (base_model): LoraModel(
-        (model): CausalWanModel(
-          (state_encoder): CategorySpecificMLP(
-            (layer1): CategorySpecificLinear()
-            (layer2): CategorySpecificLinear()
-          )
-          (action_encoder): MultiEmbodimentActionEncoder(
-            (W1): CategorySpecificLinear()
-            (W2): CategorySpecificLinear()
-            (W3): CategorySpecificLinear()
-            (pos_encoding): SinusoidalPositionalEncoding()
-          )
-          (action_decoder): CategorySpecificMLP(
-            (layer1): CategorySpecificLinear()
-            (layer2): CategorySpecificLinear()
-          )
-          (patch_embedding): Conv3d(48, 3072, kernel_size=(1, 2, 2), stride=(1, 2, 2))
-          (text_embedding): Sequential(
-            (0): Linear(in_features=4096, out_features=3072, bias=True)
-            (1): GELU(approximate='tanh')
-            (2): Linear(in_features=3072, out_features=3072, bias=True)
-          )
-          (time_embedding): Sequential(
-            (0): Linear(in_features=256, out_features=3072, bias=True)
-            (1): SiLU()
-            (2): Linear(in_features=3072, out_features=3072, bias=True)
-          )
-          (time_projection): Sequential(
-            (0): SiLU()
-            (1): Linear(in_features=3072, out_features=18432, bias=True)
-          )
-          (blocks): ModuleList(
-            (0-29): 30 x CausalWanAttentionBlock(
-              (norm1): WanLayerNorm((3072,), eps=1e-06, elementwise_affine=False)
-              (self_attn): CausalWanSelfAttention(
-                (q): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (k): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (v): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (o): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (norm_q): WanRMSNorm()
-                (norm_k): WanRMSNorm()
-                (attn): AttentionModule()
-                (causal_attn): AttentionModule()
-              )
-              (norm3): WanLayerNorm((3072,), eps=1e-06, elementwise_affine=True)
-              (cross_attn): WanI2VCrossAttention(
-                (q): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (k): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (v): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (o): Linear(
-                  in_features=3072, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (norm_q): WanRMSNorm()
-                (norm_k): WanRMSNorm()
-                (k_img): Linear(in_features=3072, out_features=3072, bias=True)
-                (v_img): Linear(in_features=3072, out_features=3072, bias=True)
-                (norm_k_img): WanRMSNorm()
-              )
-              (norm2): WanLayerNorm((3072,), eps=1e-06, elementwise_affine=False)
-              (ffn): Sequential(
-                (0): Linear(
-                  in_features=3072, out_features=14336, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=3072, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=14336, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-                (1): GELU(approximate='tanh')
-                (2): Linear(
-                  in_features=14336, out_features=3072, bias=True
-                  (lora_dropout): ModuleDict(
-                    (default): Identity()
-                  )
-                  (lora_A): ModuleDict(
-                    (default): Linear(in_features=14336, out_features=4, bias=False)
-                  )
-                  (lora_B): ModuleDict(
-                    (default): Linear(in_features=4, out_features=3072, bias=False)
-                  )
-                  (lora_embedding_A): ParameterDict()
-                  (lora_embedding_B): ParameterDict()
-                )
-              )
-            )
-          )
-          (head): CausalHead(
-            (norm): WanLayerNorm((3072,), eps=1e-06, elementwise_affine=False)
-            (head): Linear(in_features=3072, out_features=192, bias=True)
-          )
-          (img_emb): MLPProj(
-            (proj): Sequential(
-              (0): LayerNorm((1280,), eps=1e-05, elementwise_affine=True)
-              (1): Linear(in_features=1280, out_features=1280, bias=True)
-              (2): GELU(approximate='none')
-              (3): Linear(in_features=1280, out_features=3072, bias=True)
-              (4): LayerNorm((3072,), eps=1e-05, elementwise_affine=True)
-            )
-          )
-        )
-      )
-    )
-  )
-)
-
-Initializing datasets:   0%|          | 0/1 [00:00<?, ?it/s]relative_action True
-Loading relative action stats from /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/data/libero_spatial/meta/relative_stats_dreamzero.json
-relative_action_per_horizon False
-Using relative stats for joint_position: {'max': array([0.46448535, 1.10493329, 0.59629082, 1.53660098, 0.92250961,
-       1.27043545, 1.33598959]), 'min': array([-0.32371881, -0.63693237, -0.45711735, -0.95991561, -1.14854248,
-       -0.98645949, -1.11442316]), 'mean': array([ 0.02995756,  0.1373611 ,  0.00702643,  0.14241197, -0.02781391,
-        0.00171817,  0.07532857]), 'std': array([0.06266888, 0.21130294, 0.07303756, 0.26685632, 0.12870812,
-       0.21469389, 0.18929385]), 'q01': array([-0.12733212, -0.24345539, -0.17514194, -0.40103487, -0.43991076,
-       -0.55898214, -0.44443138]), 'q99': array([0.20708085, 0.71861853, 0.24322135, 0.91676752, 0.33008996,
-       0.57626678, 0.60211244])}
-Initialized dataset libero_spatial with EmbodimentTag.LIBERO_SIM
-Generated 7 shards for dataset /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/data/libero_spatial
-Time taken to initialize 1 datasets: 1.47 seconds
-Initializing datasets: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it]Initializing datasets: 100%|██████████| 1/1 [00:01<00:00,  1.47s/it]
-Using dataset:
-Mixture dataset:
-- Dataset: libero_spatial (62250 steps)
-  Max shard length: 8981
-  Min shard length: 8788
-  Num shards: 7
-  Sampling weight: 1.0
-Rank: 0
-World size: 1
-
-Successfully dumped metadata
-/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py:778: UserWarning: global_batch_size is not set. This is fine for debugging, but please set this for real experiments.
-  warnings.warn(
-Current global step: 0
-Creating custom train dataloader
-train dataloader length: 262144000
-eval dataloader length: no eval dataloader
-train dataset length: 1048576000
-GPU memory before training: 1.430511474609375e-06 GB
-No initial actions to dump
-Current global step: 0
-Creating custom train dataloader
-wandb: Tracking run with wandb version 0.27.2
-wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
-wandb: Run data is saved locally in /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/dreamzero_libero_wan22_lora_test/wandb/offline-run-20260609_131917-x3zgx9xs
-  0%|          | 0/1000 [00:00<?, ?it/s]Caching shard
-Caching shard
-Cached shard in 8.56 seconds
-Rank 0, Worker 1: Wait for shard 6 in dataset 0 in 8.63 seconds
-Caching shard
-Cached shard in 9.77 seconds
-Rank 0, Worker 0: Wait for shard 4 in dataset 0 in 9.77 seconds
-Caching shard
-Error executing job with overrides: ['report_to=wandb', 'data=dreamzero/libero_relative', 'wandb_project=dreamzero-libero', 'train_architecture=lora', 'num_frames=33', 'action_horizon=24', 'num_views=2', 'model=dreamzero/vla', 'model/dreamzero/action_head=wan_flow_matching_action_tf_wan22', 'model/dreamzero/transform=dreamzero_cotrain', 'num_frame_per_block=2', 'num_action_per_block=24', 'num_state_per_block=1', 'seed=42', 'training_args.learning_rate=1e-5', 'training_args.deepspeed=groot/vla/configs/deepspeed/zero2.json', 'save_steps=500', 'training_args.warmup_ratio=0.05', 'output_dir=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/dreamzero_libero_wan22_lora_test', 'per_device_train_batch_size=4', 'gradient_accumulation_steps=1', 'max_steps=1000', 'weight_decay=1e-5', 'save_total_limit=10', 'upload_checkpoints=false', 'bf16=true', 'tf32=true', 'eval_bf16=true', 'dataloader_pin_memory=false', 'dataloader_num_workers=2', 'image_resolution_width=320', 'image_resolution_height=160', 'save_lora_only=true', 'max_chunk_size=4', 'save_strategy=steps', 'libero_data_root=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/data/libero_spatial', 'dit_version=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B', 'text_encoder_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/models_t5_umt5-xxl-enc-bf16.pth', 'image_encoder_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.1-I2V-14B-480P/models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth', 'vae_pretrained_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/Wan2.2-TI2V-5B/Wan2.2_VAE.pth', 'tokenizer_path=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/umt5-xxl']
 Traceback (most recent call last):
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 135, in <module>
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 135, in <module>
     main()
   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
     _run_hydra(
@@ -1201,7 +23,7 @@ Traceback (most recent call last):
   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
     ret.return_value = task_function(task_cfg)
                        ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 131, in main
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 131, in main
     experiment.train()
   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 870, in train
     self.trainer.train(resume_from_checkpoint=self.resume_from_checkpoint)
@@ -1211,43 +33,57 @@ Traceback (most recent call last):
   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
     return inner_training_loop(
            ^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2514, in _inner_training_loop
-    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
-                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 5243, in get_batch_samples
-    batch_samples.append(next(epoch_iterator))
-                         ^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
-    data = self._next_data()
-           ^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1516, in _next_data
-    return self._process_data(data, worker_id)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1551, in _process_data
-    data.reraise()
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/_utils.py", line 769, in reraise
-    raise exception
-AttributeError: Caught AttributeError in DataLoader worker process 0.
-Original Traceback (most recent call last):
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
-    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 43, in fetch
-    return self.collate_fn(data)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 192, in __call__
-    return collate(features, self.tokenizer, self.num_views, self.embodiment_tag_mapping)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in collate
-    shapes = [v.shape for v in values]
-             ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in <listcomp>
-    shapes = [v.shape for v in values]
-              ^^^^^^^
-AttributeError: 'int' object has no attribute 'shape'
-
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2560, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 61, in training_step
+    loss_dict = super().training_step(model, inputs, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 389, in training_step
+    output = super().training_step(model, inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 3736, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 410, in compute_loss
+    outputs = model(inputs)
+              ^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 33, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2375, in forward
+    loss = self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+    result = forward_call(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/base_vla.py", line 146, in forward
+    action_head_outputs = self.action_head(backbone_outputs, action_inputs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/action_head/wan_flow_matching_action_tf.py", line 803, in forward
+    action_loss_per_sample = has_real_action[:, None].float() * action_loss_per_sample  # apply has_real_action
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (2) must match the size of tensor b (96) at non-singleton dimension 1
 [rank0]: Traceback (most recent call last):
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 135, in <module>
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 135, in <module>
 [rank0]:     main()
 [rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
 [rank0]:     _run_hydra(
@@ -1271,7 +107,7 @@ AttributeError: 'int' object has no attribute 'shape'
 [rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
 [rank0]:     ret.return_value = task_function(task_cfg)
 [rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/groot/vla/experiment/experiment.py", line 131, in main
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 131, in main
 [rank0]:     experiment.train()
 [rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 870, in train
 [rank0]:     self.trainer.train(resume_from_checkpoint=self.resume_from_checkpoint)
@@ -1281,48 +117,61 @@ AttributeError: 'int' object has no attribute 'shape'
 [rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2245, in train
 [rank0]:     return inner_training_loop(
 [rank0]:            ^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2514, in _inner_training_loop
-[rank0]:     batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches, args.device)
-[rank0]:                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 5243, in get_batch_samples
-[rank0]:     batch_samples.append(next(epoch_iterator))
-[rank0]:                          ^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 734, in __next__
-[rank0]:     data = self._next_data()
-[rank0]:            ^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1516, in _next_data
-[rank0]:     return self._process_data(data, worker_id)
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 1551, in _process_data
-[rank0]:     data.reraise()
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/_utils.py", line 769, in reraise
-[rank0]:     raise exception
-[rank0]: AttributeError: Caught AttributeError in DataLoader worker process 0.
-[rank0]: Original Traceback (most recent call last):
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
-[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 43, in fetch
-[rank0]:     return self.collate_fn(data)
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 192, in __call__
-[rank0]:     return collate(features, self.tokenizer, self.num_views, self.embodiment_tag_mapping)
-[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in collate
-[rank0]:     shapes = [v.shape for v in values]
-[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^
-[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/transform/dreamzero_cotrain.py", line 167, in <listcomp>
-[rank0]:     shapes = [v.shape for v in values]
-[rank0]:               ^^^^^^^
-[rank0]: AttributeError: 'int' object has no attribute 'shape'
-[rank0]: . Did you mean: '_return_value'?
-[1;34mwandb[0m: 
-[1;34mwandb[0m: You can sync this run to the cloud by running:
-[1;34mwandb[0m: [1mwandb sync /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr/checkpoints/dreamzero_libero_wan22_lora_test/wandb/offline-run-20260609_131917-x3zgx9xs[0m
-[1;34mwandb[0m: Find logs at: [1;35mcheckpoints/dreamzero_libero_wan22_lora_test/wandb/offline-run-20260609_131917-x3zgx9xs/logs[0m
-Cached shard in 6.56 seconds
-[rank0]:[W609 13:19:37.130269775 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-E0609 13:19:48.038000 1805648 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 1807375) of binary: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/bin/python3
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 2560, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/experiment.py", line 61, in training_step
+[rank0]:     loss_dict = super().training_step(model, inputs, *args, **kwargs)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 389, in training_step
+[rank0]:     output = super().training_step(model, inputs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/transformers/trainer.py", line 3736, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/experiment/base.py", line 410, in compute_loss
+[rank0]:     outputs = model(inputs)
+[rank0]:               ^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/deepspeed/utils/nvtx.py", line 33, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/deepspeed/runtime/engine.py", line 2375, in forward
+[rank0]:     loss = self.module(*inputs, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:            ^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/base_vla.py", line 146, in forward
+[rank0]:     action_head_outputs = self.action_head(backbone_outputs, action_inputs)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/groot/vla/model/dreamzero/action_head/wan_flow_matching_action_tf.py", line 803, in forward
+[rank0]:     action_loss_per_sample = has_real_action[:, None].float() * action_loss_per_sample  # apply has_real_action
+[rank0]:                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+[rank0]: RuntimeError: The size of tensor a (2) must match the size of tensor b (96) at non-singleton dimension 1
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/ccc_rrrr_v2/checkpoints/dreamzero_libero_wan22_lora_test/wandb/offline-run-20260610_023822-6ywx5ax6
+wandb: Find logs at: checkpoints/dreamzero_libero_wan22_lora_test/wandb/offline-run-20260610_023822-6ywx5ax6/logs
+[rank0]:[W610 02:38:44.744177073 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0610 02:38:57.491000 1054569 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 1058670) of binary: /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/miniconda3/envs/dreamzero_ours_v2/bin/python3
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -1349,10 +198,10 @@ Failures:
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2026-06-09_13:19:48
-  host      : test--1616fe54711c-smdbzbcph4
+  time      : 2026-06-10_02:38:57
+  host      : test--1616fe54711c-oxpizjveyf
   rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 1807375)
+  exitcode  : 1 (pid: 1058670)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
+============================================================ß
