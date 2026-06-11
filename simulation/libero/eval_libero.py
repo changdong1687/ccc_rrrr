@@ -51,6 +51,67 @@ def _state(obs: dict) -> tuple[np.ndarray, np.ndarray]:
     return joint, gripper
 
 
+def _gripper_command(value: Any, threshold: float, invert: bool) -> float:
+    """Binarize a predicted gripper qpos into a robosuite gripper command.
+
+    The simulator's gripper controller only uses the sign of the action
+    (+1 closes, -1 opens); the policy predicts a continuous finger position.
+    """
+    closed = float(np.asarray(value).reshape(-1)[0]) <= threshold
+    command = 1.0 if closed else -1.0
+    return -command if invert else command
+
+
+def _build_joint_position_controller_config(controller: str, joint_delta_bound: float, joint_kp: float | None):
+    try:
+        from robosuite.controllers import load_controller_config
+    except Exception:
+        return None
+    cfg = load_controller_config(default_controller=controller)
+    if controller == "JOINT_POSITION":
+        cfg["input_max"] = joint_delta_bound
+        cfg["input_min"] = -joint_delta_bound
+        cfg["output_max"] = joint_delta_bound
+        cfg["output_min"] = -joint_delta_bound
+        if joint_kp is not None:
+            cfg["kp"] = joint_kp
+    return cfg
+
+
+def _override_controller_scaling(env: Any, joint_delta_bound: float, joint_kp: float | None) -> None:
+    inner = getattr(env, "env", env)
+    robots = getattr(inner, "robots", None)
+    if not robots:
+        print(
+            "[warn] Could not locate robots to override JOINT_POSITION scaling; "
+            "the controller may keep its default 0.05 rad/step range and undershoot targets."
+        )
+        return
+    overridden = False
+    for robot in robots:
+        ctrl = getattr(robot, "controller", None) or getattr(robot, "_controller", None)
+        if ctrl is None:
+            continue
+        overridden = True
+        for attr, val in (
+            ("input_max", joint_delta_bound),
+            ("input_min", -joint_delta_bound),
+            ("output_max", joint_delta_bound),
+            ("output_min", -joint_delta_bound),
+        ):
+            if hasattr(ctrl, attr):
+                setattr(ctrl, attr, val)
+        if joint_kp is not None and hasattr(ctrl, "kp"):
+            ctrl.kp = joint_kp
+        if hasattr(ctrl, "action_scale"):
+            ctrl.action_scale = None
+    if not overridden:
+        print(
+            "[warn] Found robots but no controller object to override; "
+            "verify the JOINT_POSITION action scaling on your LIBERO/robosuite version."
+        )
+
+
 def _task_language(task: Any) -> str:
     for attr in ("language", "task", "description", "name"):
         value = getattr(task, attr, None)
@@ -75,7 +136,16 @@ def _load_benchmark(name: str):
     return benchmark_dict[name]()
 
 
-def _make_env(task: Any, bddl_root: str | None, seed: int):
+def _make_env(
+    task: Any,
+    bddl_root: str | None,
+    seed: int,
+    controller: str = "JOINT_POSITION",
+    joint_delta_bound: float = 1.0,
+    joint_kp: float | None = None,
+    camera_height: int = 160,
+    camera_width: int = 320,
+):
     try:
         from libero.libero.envs import OffScreenRenderEnv
     except ImportError as exc:
@@ -85,7 +155,31 @@ def _make_env(task: Any, bddl_root: str | None, seed: int):
     if bddl_file and bddl_root and not os.path.isabs(str(bddl_file)):
         bddl_file = str(Path(bddl_root) / str(bddl_file))
     init_states = getattr(task, "init_states", None)
-    env = OffScreenRenderEnv(bddl_file_name=bddl_file, camera_heights=160, camera_widths=320)
+
+    # The policy predicts absolute joint targets, so drive a JOINT_POSITION
+    # controller (delta-based in robosuite) with identity scaling. Try the
+    # controller_configs kwarg first, then fall back to LIBERO's name-only API.
+    controller_configs = _build_joint_position_controller_config(controller, joint_delta_bound, joint_kp)
+    env = None
+    if controller_configs is not None:
+        try:
+            env = OffScreenRenderEnv(
+                bddl_file_name=bddl_file,
+                camera_heights=camera_height,
+                camera_widths=camera_width,
+                controller_configs=controller_configs,
+            )
+        except TypeError:
+            env = None
+    if env is None:
+        env = OffScreenRenderEnv(
+            bddl_file_name=bddl_file,
+            camera_heights=camera_height,
+            camera_widths=camera_width,
+            controller=controller,
+        )
+        if controller == "JOINT_POSITION":
+            _override_controller_scaling(env, joint_delta_bound, joint_kp)
     env.seed(seed)
     return env, init_states
 
@@ -117,7 +211,14 @@ def _env_action_dim(env: Any) -> int:
     raise AttributeError("Could not determine LIBERO environment action dimension")
 
 
-def _prediction_to_env_action(result: Batch, env_action_dim: int) -> np.ndarray:
+def _prediction_to_env_action(
+    result: Batch,
+    env_action_dim: int,
+    current_joint: np.ndarray,
+    joint_control_mode: str,
+    gripper_threshold: float,
+    gripper_invert: bool,
+) -> np.ndarray:
     act = result.act
     joint = act.get("action.joint_position", None)
     gripper = act.get("action.gripper_position", None)
@@ -128,10 +229,18 @@ def _prediction_to_env_action(result: Batch, env_action_dim: int) -> np.ndarray:
         joint = joint.detach().cpu().numpy()
     if isinstance(gripper, torch.Tensor):
         gripper = gripper.detach().cpu().numpy()
-    joint = np.asarray(joint)[0].reshape(-1)
-    parts = [joint]
+    # Take the first action of the chunk; it is an *absolute* joint target.
+    joint_target = np.asarray(joint)[0].reshape(-1)
+    current_joint = np.asarray(current_joint, dtype=np.float64).reshape(-1)
+    if joint_control_mode == "delta":
+        joint_cmd = joint_target - current_joint[: joint_target.shape[0]]
+    else:
+        joint_cmd = joint_target
+
+    parts = [joint_cmd]
     if gripper is not None:
-        parts.append(np.asarray(gripper)[0].reshape(-1))
+        gripper_value = np.asarray(gripper)[0].reshape(-1)[0]
+        parts.append(np.asarray([_gripper_command(gripper_value, gripper_threshold, gripper_invert)]))
     action = np.concatenate(parts).astype(np.float64)
     if len(action) < env_action_dim:
         action = np.pad(action, (0, env_action_dim - len(action)))
@@ -204,18 +313,41 @@ def evaluate(args: argparse.Namespace) -> None:
     for task_id in range(num_tasks):
         task = benchmark.get_task(task_id)
         language = args.prompt or _task_language(task)
-        env, init_states = _make_env(task, args.bddl_root, args.seed + task_id)
+        env, init_states = _make_env(
+            task,
+            args.bddl_root,
+            args.seed + task_id,
+            controller=args.controller,
+            joint_delta_bound=args.joint_delta_bound,
+            joint_kp=args.joint_kp,
+            camera_height=args.camera_height,
+            camera_width=args.camera_width,
+        )
+        action_dim = _env_action_dim(env)
         task_successes = 0
 
         for episode_idx in range(args.episodes_per_task):
             obs = _reset_env(env, init_states, episode_idx)
+            # Let the scene settle before rollout (zero action = hold joints).
+            if args.num_settle_steps > 0:
+                settle_action = np.zeros(action_dim, dtype=np.float64)
+                for _ in range(args.num_settle_steps):
+                    obs, _, _, _ = env.step(settle_action)
             video_frames = [_video_frame(obs, args.video_view)] if args.save_videos else []
             success = False
             start = time.perf_counter()
             for step in range(args.max_steps):
+                current_joint, _ = _state(obs)
                 with torch.inference_mode():
                     result, _ = policy.lazy_joint_forward_causal(Batch(obs=build_obs(obs, language)))
-                action = _prediction_to_env_action(result, _env_action_dim(env))
+                action = _prediction_to_env_action(
+                    result,
+                    action_dim,
+                    current_joint,
+                    args.joint_control_mode,
+                    args.gripper_threshold,
+                    args.gripper_invert,
+                )
                 obs, reward, done, info = env.step(action)
                 if args.save_videos:
                     video_frames.append(_video_frame(obs, args.video_view))
@@ -275,6 +407,20 @@ def main() -> None:
     parser.add_argument("--prompt", default=None, help="Override task language")
     parser.add_argument("--output-dir", default="results_libero")
     parser.add_argument("--render", action="store_true")
+    parser.add_argument("--camera-height", type=int, default=160)
+    parser.add_argument("--camera-width", type=int, default=320)
+    parser.add_argument("--controller", type=str, default="JOINT_POSITION")
+    parser.add_argument(
+        "--joint-control-mode",
+        choices=("delta", "absolute"),
+        default="delta",
+        help="'delta' commands target-minus-current (for robosuite's delta JOINT_POSITION controller).",
+    )
+    parser.add_argument("--joint-delta-bound", type=float, default=1.0)
+    parser.add_argument("--joint-kp", type=float, default=None)
+    parser.add_argument("--gripper-threshold", type=float, default=0.02)
+    parser.add_argument("--gripper-invert", action="store_true")
+    parser.add_argument("--num-settle-steps", type=int, default=10)
     parser.add_argument("--save-videos", action="store_true", help="Save one rollout video per episode")
     parser.add_argument("--video-view", choices=("agentview", "eye_in_hand", "both"), default="agentview")
     parser.add_argument("--video-fps", type=int, default=20)

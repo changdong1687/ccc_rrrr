@@ -25,6 +25,14 @@ VIDEO_EPISODES_PER_TASK=${VIDEO_EPISODES_PER_TASK:-1}
 VIDEO_FPS=${VIDEO_FPS:-20}
 DEBUG_OPEN_LOOP=${DEBUG_OPEN_LOOP:-false}
 RESET_SERVER_EACH_REQUEST=${RESET_SERVER_EACH_REQUEST:-false}
+# Joint-position control / gripper / settle knobs (see eval_libero_client.py).
+CONTROLLER=${CONTROLLER:-"JOINT_POSITION"}
+JOINT_CONTROL_MODE=${JOINT_CONTROL_MODE:-"delta"}
+JOINT_DELTA_BOUND=${JOINT_DELTA_BOUND:-1.0}
+JOINT_KP=${JOINT_KP:-}
+GRIPPER_THRESHOLD=${GRIPPER_THRESHOLD:-0.02}
+GRIPPER_INVERT=${GRIPPER_INVERT:-false}
+NUM_SETTLE_STEPS=${NUM_SETTLE_STEPS:-10}
 
 if [ -z "$CHECKPOINT_PATH" ]; then
     LATEST_CHECKPOINT=$(find "$TRAIN_OUTPUT_DIR" -maxdepth 1 -type d -name 'checkpoint-*' | sort -V | tail -n 1 || true)
@@ -62,7 +70,19 @@ CLIENT_ARGS=(
     --output-dir "$OUTPUT_DIR"
     --video-episodes-per-task "$VIDEO_EPISODES_PER_TASK"
     --video-fps "$VIDEO_FPS"
+    --controller "$CONTROLLER"
+    --joint-control-mode "$JOINT_CONTROL_MODE"
+    --joint-delta-bound "$JOINT_DELTA_BOUND"
+    --gripper-threshold "$GRIPPER_THRESHOLD"
+    --num-settle-steps "$NUM_SETTLE_STEPS"
 )
+
+if [ -n "$JOINT_KP" ]; then
+    CLIENT_ARGS+=(--joint-kp "$JOINT_KP")
+fi
+if [ "$GRIPPER_INVERT" = "true" ]; then
+    CLIENT_ARGS+=(--gripper-invert)
+fi
 
 if [ "$SAVE_VIDEO" = "true" ]; then
     CLIENT_ARGS+=(--save-video)
