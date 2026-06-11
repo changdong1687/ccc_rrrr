@@ -42,3 +42,23 @@ python simulation/libero/eval_libero.py \
   --output-dir ./results_libero_spatial
 
 ```
+
+
+```bash
+export PYTHONPATH=/inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/LIBERO:$PYTHONPATH
+export MUJOCO_GL=egl
+export PYOPENGL_PLATFORM=egl
+export MUJOCO_EGL_DEVICE_ID=0
+unset EGL_DEVICE_ID
+
+python simulation/libero/eval_libero.py \
+  --model_path ./checkpoints/dreamzero_libero_wan22_lora_smoke_gbs16/checkpoint-4000 \
+  --benchmark libero_spatial \
+  --bddl-root /inspire/hdd/project/realtimedecisionmaking/chentao-25011/surd/codes/LIBERO/libero/libero/bddl_files/libero_spatial \
+  --episodes-per-task 10 \
+  --max-steps 500 \
+  --device cuda:0 \
+  --output-dir ./results_libero_spatial \
+  --save-videos
+
+```
