@@ -6,7 +6,7 @@ SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT=${DREAMZERO_ROOT:-$(cd "$SCRIPT_DIR/../.." && pwd)}
 
 MODEL_PATH=${MODEL_PATH:-}
-TRAIN_OUTPUT_DIR=${TRAIN_OUTPUT_DIR:-"$REPO_ROOT/checkpoints/dreamzero_libero_wan22_lora"}
+TRAIN_OUTPUT_DIR=${TRAIN_OUTPUT_DIR:-"$REPO_ROOT/checkpoints/dreamzero_libero_wan22_lora_smoke_gbs16/checkpoint-9500"}
 BIND_HOST=${BIND_HOST:-"0.0.0.0"}
 BIND_PORT=${BIND_PORT:-8000}
 DEVICE=${DEVICE:-"cuda:0"}
