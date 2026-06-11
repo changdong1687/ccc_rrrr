@@ -110,16 +110,23 @@ def _override_controller_scaling(env: Any, joint_delta_bound: float, joint_kp: f
         if ctrl is None:
             continue
         overridden = True
+        # robosuite's control_limits / scale_action expect per-joint *arrays*,
+        # not scalars, so size everything to the controller's action dim.
+        dim = getattr(ctrl, "control_dim", None)
+        if not dim:
+            qpos_index = getattr(ctrl, "qpos_index", None)
+            dim = len(qpos_index) if qpos_index is not None else 7
+        bound = np.ones(int(dim), dtype=np.float64) * joint_delta_bound
         for attr, val in (
-            ("input_max", joint_delta_bound),
-            ("input_min", -joint_delta_bound),
-            ("output_max", joint_delta_bound),
-            ("output_min", -joint_delta_bound),
+            ("input_max", bound),
+            ("input_min", -bound),
+            ("output_max", bound),
+            ("output_min", -bound),
         ):
             if hasattr(ctrl, attr):
-                setattr(ctrl, attr, val)
+                setattr(ctrl, attr, val.copy())
         if joint_kp is not None and hasattr(ctrl, "kp"):
-            ctrl.kp = joint_kp
+            ctrl.kp = np.ones(int(dim), dtype=np.float64) * joint_kp
         # robosuite caches the scale factor lazily; clear it so it recomputes.
         if hasattr(ctrl, "action_scale"):
             ctrl.action_scale = None
